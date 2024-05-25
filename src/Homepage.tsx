@@ -14,7 +14,7 @@ import MobileNavbar from './components/MobileNav';
 
 
 export default function HomePage() {
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
+  const [isLoading, setIsLoading] = useState<Boolean>(true);
   const [products, setProducts] = useState<
     {
       id: number;
