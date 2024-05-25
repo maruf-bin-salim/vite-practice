@@ -49,7 +49,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <MobileNavbar />
-      <div className="flex flex-col gap-8 p-8 overflow-y-auto lg:flex-row md:grid md:grid-cols-2 md:gap-8 md:p-8 lg:grid-cols-3">
+      <div className="flex flex-col gap-8 p-8 overflow-y-auto lg:flex-row md:grid md:grid-cols-2 md:gap-8 md:p-8 lg:grid-cols-3 md:w-[90%] lg:w-[80%] m-auto no-scrollbar">
         {
           products?.map((product) => (
             <Link to={`/product/${product.id}`}>
