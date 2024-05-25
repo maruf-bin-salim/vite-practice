@@ -5,8 +5,10 @@ import {
   BrowserRouter,
   Routes
 } from 'react-router-dom';
-import Detail from './detail';
+import DetailPage from './DetailPage';
 import HomePage from './Homepage';
+import AboutPage from './AboutPage';
+import ContactPage from './ContactPgae';
 
 
 
@@ -20,7 +22,9 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product/:id" element={<Detail />} />
+        <Route path="/product/:id" element={<DetailPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path='/contact' element={<ContactPage/>} />
       </Routes>
     </BrowserRouter>
   );

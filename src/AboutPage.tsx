@@ -1,0 +1,12 @@
+import MobileNavbar from "./components/MobileNav"
+
+export default function AboutPage() {
+    return (
+        <div className="flex flex-col">
+            <MobileNavbar />
+            <div className="flex items-center justify-center text-xl font-semibold h-96">
+                About Page
+            </div>
+        </div>
+    )
+}

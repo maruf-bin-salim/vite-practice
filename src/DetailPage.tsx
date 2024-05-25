@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import { Link, useParams } from "react-router-dom"
 import { getProductById } from "./utils/getProducts";
 
-export default function Detail() {
+export default function DetailPage() {
 
     // get id from the url
     const { id } = useParams();
@@ -34,11 +34,6 @@ export default function Detail() {
         , [id]);
 
     return (
-        // <div className="flex flex-col bg-white p-4 rounded-lg shadow-lg w-[80%] m-auto mt-10">
-        //     <div className="text-xl font-semibold">Product 1</div>
-        //     <div className="text-lg">This is a product description</div>
-        //     <div className="text-xl font-semibold">$100</div>
-        // </div>
         <div className="flex flex-col p-4">
             <Link to="/">
                 <button className="p-2 mt-5 text-white bg-blue-500 rounded-lg">Back</button>
