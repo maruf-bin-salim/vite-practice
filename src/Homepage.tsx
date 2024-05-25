@@ -8,6 +8,7 @@ import {
   Link,
 } from 'react-router-dom';
 import MobileNavbar from './components/MobileNav';
+import PageLoader from './components/PageLoader';
 
 
 
@@ -40,16 +41,14 @@ export default function HomePage() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center w-screen h-screen text-xl font-semibold bg-gray-100">
-        Loading...
-      </div>
+      <PageLoader />
     )
   }
 
 
   return (
     <div className="bg-gray-100 flex flex-col min-h-[min-content]">
-      <MobileNavbar/>
+      <MobileNavbar />
       <div className="grid h-full grid-cols-1 gap-4 p-4 md:grid-cols-3">
         {
           products?.map((product) => (

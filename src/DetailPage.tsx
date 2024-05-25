@@ -2,6 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import { Link, useParams } from "react-router-dom"
 import { getProductById } from "./utils/getProducts";
 import { MoveLeftIcon } from "lucide-react";
+import PageLoader from "./components/PageLoader";
 
 export default function DetailPage() {
 
@@ -35,16 +36,18 @@ export default function DetailPage() {
     }
         , [id]);
 
+    if(isLoading) {
+        return (
+            <PageLoader />
+        )
+    }
+
     return (
         <div className="flex flex-col p-4">
             <Link to="/">
                <MoveLeftIcon size={24} />
             </Link>
-            {
-                isLoading && <div className="flex items-center justify-center text-xl font-semibold h-96">
-                    Loading...
-                    </div>
-            }
+            
 
             {
                 !isLoading && product &&
