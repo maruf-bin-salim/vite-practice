@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import { Link, Router, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { getProductById } from "./utils/getProducts";
 
 export default function Detail() {
@@ -41,10 +41,10 @@ export default function Detail() {
         // </div>
         <div className="flex flex-col p-4">
             <Link to="/">
-                <button className="bg-blue-500 text-white p-2 rounded-lg mt-5">Back</button>
+                <button className="p-2 mt-5 text-white bg-blue-500 rounded-lg">Back</button>
             </Link>
             {
-                isLoading && <div className="text-xl font-semibold flex justify-center items-center h-96">
+                isLoading && <div className="flex items-center justify-center text-xl font-semibold h-96">
                     Loading...
                     </div>
             }
@@ -54,7 +54,7 @@ export default function Detail() {
                 <div className="flex flex-col bg-white p-4 rounded-lg shadow-lg w-full m-auto mt-2 border-2 border-gray-200 md:w-[50%]">
                     <div className="text-xl font-semibold">{product?.name}</div>
                     <div className="text-xl font-semibold">${product?.price}</div>
-                    <button className="bg-blue-500 text-white p-2 rounded-lg mt-5">Add to Cart</button>
+                    <button className="p-2 mt-5 text-white bg-blue-500 rounded-lg">Add to Cart</button>
                 </div>
             }
 
