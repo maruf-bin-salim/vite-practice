@@ -1,6 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import { Link, useParams } from "react-router-dom"
 import { getProductById } from "./utils/getProducts";
+import { MoveLeftIcon } from "lucide-react";
 
 export default function DetailPage() {
 
@@ -10,6 +11,7 @@ export default function DetailPage() {
         id: number;
         name: string;
         price: number;
+        description: string;
     } | null>(null);
 
     const [isLoading, setIsLoading] = useState<Boolean>(false);
@@ -36,7 +38,7 @@ export default function DetailPage() {
     return (
         <div className="flex flex-col p-4">
             <Link to="/">
-                <button className="p-2 mt-5 text-white bg-blue-500 rounded-lg">Back</button>
+               <MoveLeftIcon size={24} />
             </Link>
             {
                 isLoading && <div className="flex items-center justify-center text-xl font-semibold h-96">
@@ -46,9 +48,12 @@ export default function DetailPage() {
 
             {
                 !isLoading && product &&
-                <div className="flex flex-col bg-white p-4 rounded-lg shadow-lg w-full m-auto mt-2 border-2 border-gray-200 md:w-[50%]">
+                <div className="flex flex-col bg-white p-4 rounded-lg shadow-lg w-full m-auto border-2 border-gray-200 md:w-[50%] lg:w-[40%] mt-10">
                     <div className="text-xl font-semibold">{product?.name}</div>
                     <div className="text-xl font-semibold">${product?.price}</div>
+                    <p className="text-gray-500">
+                        {product.description}
+                    </p>
                     <button className="p-2 mt-5 text-white bg-blue-500 rounded-lg">Add to Cart</button>
                 </div>
             }

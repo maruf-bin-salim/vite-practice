@@ -20,6 +20,7 @@ export default function HomePage() {
       id: number;
       name: string;
       price: number;
+      description: string;
     }[]
     | null>(null);
 
@@ -55,7 +56,7 @@ export default function HomePage() {
             <Link to={`/product/${product.id}`}>
               <ProductCard
                 productName={product.name}
-                productDescription="This is a product description"
+                productDescription={product.description}
                 productPrice={product.price}
               />
             </Link>

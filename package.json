@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.379.0",
     "preact": "^10.19.6",
     "react-router-dom": "^6.23.1"
   },
