@@ -59,6 +59,67 @@ const DEMO_PRODUCTS = [
         description: "This is a product description",
         price: 1000,
     },
+
+    {
+        id: 11,
+        name: "Product 11",
+        description: "This is a product description",
+        price: 1100,
+    },
+    {
+        id: 12,
+        name: "Product 12",
+        description: "This is a product description",
+        price: 1200,
+    },
+    {
+        id: 13,
+        name: "Product 13",
+        description: "This is a product description",
+        price: 1300,
+    },
+    {
+        id: 14,
+        name: "Product 14",
+        description: "This is a product description",
+        price: 1400,
+    },
+    {
+        id: 15,
+        name: "Product 15",
+        description: "This is a product description",
+        price: 1500,
+    },
+    {
+        id: 16,
+        name: "Product 16",
+        description: "This is a product description",
+        price: 1600,
+    },
+    {
+        id: 17,
+        name: "Product 17",
+        description: "This is a product description",
+        price: 1700,
+    },
+    {
+        id: 18,
+        name: "Product 18",
+        description: "This is a product description",
+        price: 1800,
+    },
+    {
+        id: 19,
+        name: "Product 19",
+        description: "This is a product description",
+        price: 1900,
+    },
+    {
+        id: 20,
+        name: "Product 20",
+        description: "This is a product description",
+        price: 2000,
+    },
 ];
 
 
